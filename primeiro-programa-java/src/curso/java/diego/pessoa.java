@@ -3,17 +3,22 @@ package curso.java.diego;
 import java.util.Date;
 
 public class pessoa {
-
+	
+	private String sobrenome;
+	private int idade;
+	private Date dataNascimento;
 	private String nome;
+	private date dataCadastro
+	
+	
+	
 	public Date getDataNascimento() {
 		return dataNascimento;
 	}
 	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-	private String sobrenome;
-	private int idade;
-	private Date dataNascimento;
+	
 	
 	
 	public int getIdade() {

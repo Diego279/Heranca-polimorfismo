@@ -1,22 +1,19 @@
 package cursojava.executavel;
 
 public class PrimeiroClasseJava {
-	/*Variavel Global*/
-	static int maiorIdadeGlobal =30;
-	
-	/*Main é um metado auto executavel em java*/
-	public static void main(String[] args) {
-		
-		/*Variavel local porque pertence somente a esse metado */	
-	int maiorIdade = 18;
-	System.out.println("Valor da variavel local= " + maiorIdade);
-	metado2();
 
+	public static void main(String[] args) {
+	
+		double nota1 = 90; 	int nota2 = 70;
+		double nota3 = 35;
+		double nota4 = 55;
+		double mediaFinal=(nota1 + nota2 + nota3 + nota4) /4;
+		
+		System.out.println("Media das notas é = " + mediaFinal);
+		
+		
 	}
-public static void metado2() {
-	System.out.println("mostre a variavel global " + maiorIdadeGlobal);
-	
 }
 	
 	
-}
+

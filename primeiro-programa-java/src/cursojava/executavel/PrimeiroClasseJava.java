@@ -1,16 +1,18 @@
 package cursojava.executavel;
 
 public class PrimeiroClasseJava {
-	
-/*Mein é um metado auto executavel em java*/
 	public static void main(String[] args) {
-		/* Estrutura de repetição FOR com Break (Parada)*/
-
-	for (int numero = 0; numero <= 10; numero ++) {
-		if (numero == 3) {
-		System.out.println("Oba encontrei o numer 3"); 
-		break;
-	    }
-	  }
+	/*Estrutura de repetição For e Continue */	
+	
+	for (int numero = 0; numero <= 10; numero++) {
+		if (numero == 3 || numero == 6 || numero == 9) {
+			System.out.println("Obaa, encontrei o numero "+ numero);
+		continue;
+		}
+		
 	}
-}
+		}	
+		
+	}
+	
+

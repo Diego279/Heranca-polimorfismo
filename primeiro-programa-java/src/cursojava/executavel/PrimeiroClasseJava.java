@@ -3,38 +3,39 @@ package cursojava.executavel;
 import javax.swing.JOptionPane;
 
 public class PrimeiroClasseJava {
+	/*Main é um metado auto executavel em java*/
 	public static void main(String[] args) {
 
-
-	/*ShowInput mostra uma entrada de dados tipo dialogo na tela*/
-	/*Essa função e da biblioteca Javax que foi importada */	
-	String carros = JOptionPane.showInputDialog("Infome a quantidade decarros");
-    String pessoas = JOptionPane.showInputDialog("Infome a quantidade de pessoas");
-
-	double carroNumero = Double.parseDouble(carros);
+		
+	String nota1 = JOptionPane.showInputDialog("Inform a nota 1");
+	String nota2 = JOptionPane.showInputDialog("Inform a nota 2");
+	String nota3 = JOptionPane.showInputDialog("Inform a nota 3");
+	String nota4 = JOptionPane.showInputDialog("Inform a nota 4");
 	
-	double pessoaNumero = Double.parseDouble(pessoas);
-	/*Foi Criado uma variavel convertendo para o tipo int */
-		
-	int divisao = (int)(carroNumero / pessoaNumero);
-		/*Criado variavel resto onde resto recebe o resto da divisão */
-		
-		double resto = carroNumero % pessoaNumero;
-		
-		int resposta = JOptionPane.showConfirmDialog(null, "Deseja ver o resultado da divisão?");
-		
-		if (resposta == 0) {
-			JOptionPane.showMessageDialog(null,"Divisão para as pessoas deu " + divisao);	
-		}else {
-			System.out.println("Não quis ver o resultado");
-		}
-		
-		resposta = JOptionPane.showConfirmDialog(null, "Deseja ver o RESTO da divisão");
-		if (resposta == 0) {
-			JOptionPane.showMessageDialog(null, "O resto da divisão é " + resto);
-		}
-		
-		
+	double dNota1 = Double.parseDouble(nota1);
+	double dNota2 = Double.parseDouble(nota2);
+	double dNota3 = Double.parseDouble(nota3);
+	double dNota4 = Double.parseDouble(nota4);
 
-	}	
+	double media = (dNota1 + dNota2 + dNota3 + dNota4) /4;
+	
+	JOptionPane.showConfirmDialog(null, "A media é : " + media);
+
+	
+	/*Média para aprovação é 70*/
+	
+	if (media >=50) {
+		
+		if (media >= 70) {
+			JOptionPane.showMessageDialog(null, "Aluno está aprovado com a média de :" + media);
+		}else {
+			JOptionPane.showMessageDialog(null, "Aluno em recuperação com a media de :" + media);
+		}
+	}else {		
+		JOptionPane.showMessageDialog(null, "Aluno está repravo  :" + media);
 	}
+	
+	
+	}	
+	}	
+	

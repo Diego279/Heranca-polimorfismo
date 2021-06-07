@@ -122,9 +122,26 @@ public void setNota4(double nota4) {
 }
 /*Método que retorna a média do aluno*/
 public double getMediaNota() {
-	return (nota1 + nota2 + nota3 + nota4) / 4;
+ return (nota1 + nota2 + nota3 + nota4) / 4;
 }
-          
-
+/*Método que retorna true para aprovado e false para reprovado*/
+public boolean getAlunoAprovado() {
+	double media = this.getMediaNota();/*Estou atribuido a media da nota para a variavel media*/
+	if (media >= 70) {
+		return true;
+	}else {
+		return false;
+	}
 }
+/*Segundo Metado Retornado String*/
+public String getAlunoAprovado2() {
+	double media = this.getMediaNota();
+	if (media >= 70) {
+		return "Aluno estâ aprovado";
+	}else {
+		return "Aluno esta reprovado";
+	}
+	}
 
+	
+}

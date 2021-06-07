@@ -22,14 +22,22 @@ public class PrimeiroClasseJava {
 	aluno1.setRegistroGeral("152.1245.11");
 	aluno1.setSerieMatriculado("5");
 	aluno1.setNomeEscola("Escola de doido");
+	aluno1.setNota1(70);
+	aluno1.setNota2(40);
+	aluno1.setNota3(100);
+	aluno1.setNota4(90);
+
+	
+	
+	
+	
 	
 	System.out.println("Aluno 1");
 	System.out.println("Nome é " + aluno1.getNome());
 	System.out.println("Nome do mãe é " + aluno1.getNomeMae());
 	System.out.println("Nome da Escola é " + aluno1.getNomeEscola());
-	
 	System.out.println("Nome é = " + aluno1.getNome());/*Get resgata um valor do atributo*/
-	
+	System.out.println("Média de nota é " + aluno1.getMediaNota());
 	System.out.println("===================================================================");
 	/*===========================================================================================*/
 	Aluno aluno2 = new Aluno();/*Aqui será o Pedro*/
@@ -55,8 +63,7 @@ public class PrimeiroClasseJava {
 	
 	Aluno aluno5 = new Aluno("José ", 50);/*Construtur com parametro*/
 	
-		
-	
+
 	
 	}	
 	

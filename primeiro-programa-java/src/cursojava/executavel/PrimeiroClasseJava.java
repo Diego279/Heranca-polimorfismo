@@ -3,6 +3,7 @@ package cursojava.executavel;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import sun.jvm.hotspot.gc.parallel.PSYoungGen;
 
 public class PrimeiroClasseJava {
 	/*Main é um metado auto executavel em java*/
@@ -11,7 +12,7 @@ public class PrimeiroClasseJava {
 	
 //*=========================================================================*/	
 	
-		
+		/*
 		
 		
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
@@ -43,13 +44,41 @@ public class PrimeiroClasseJava {
 		aluno1.setNota1(Double.parseDouble(note1));
 		aluno1.setNota2(Double.parseDouble(note2));
 		aluno1.setNota3(Double.parseDouble(note3));	
-		aluno1.setNota4(Double.parseDouble(note4));
+		aluno1.setNota4(Double.parseDouble(note4));*/
 	
-		
+		/*
 		System.out.println(aluno1.toString());
 		System.out.println("Media do aluno = " + aluno1.getMediaNota());
 		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
 		System.out.println("");
+		*/
+		
+		/* Equals e hashcode*/
+		
+		
+		Aluno aluno1 = new Aluno();
+		aluno1.setNome("Alex");
+		aluno1.setNumeroCpf("123");
+		
+		Aluno aluno2 = new Aluno();
+		aluno2.setNome("Alex");
+		aluno2.setNumeroCpf("123");
+		
+		if (aluno1.equals(aluno2)) {
+			System.out.println("Aluno são Iguais ");
+		}else {
+			System.out.println("Alunos são Diferente");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 	}	

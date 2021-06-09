@@ -3,7 +3,7 @@ package cursojava.classes;
 public class Aluno {
 	 private  String nome;
 	 private int idade;
-	 private String dataNascimrnto;
+	 private String dataNascimento;
 	 private String registroGeral;
 	 private String numeroCpf;
 	 private String nomeMae;
@@ -47,11 +47,11 @@ public int getIdade() {
 public void setIdade(int idade) {
 	this.idade = idade;
 }
-public String getDataNascimrnto() {
-	return dataNascimrnto;
+public String getDataNascimento() {
+	return dataNascimento;
 }
-public void setDataNascimrnto(String dataNascimrnto) {
-	this.dataNascimrnto = dataNascimrnto;
+public void setDataNascimento(String dataNascimrnto) {
+	this.dataNascimento = dataNascimrnto;
 }
 public String getRegistroGeral() {
 	return registroGeral;

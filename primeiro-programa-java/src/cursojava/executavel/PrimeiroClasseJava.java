@@ -1,5 +1,7 @@
 package cursojava.executavel;
 
+import javax.swing.JOptionPane;
+
 import cursojava.classes.Aluno;
 
 public class PrimeiroClasseJava {
@@ -8,63 +10,59 @@ public class PrimeiroClasseJava {
 	
 	/*new aluno() é uma instancia (Criação de Objeto)*/
 	/*aluno é uma referencia para o objeto aluno*/	
-	
-	/*=========================================================================*/	
-	Aluno aluno1 = new Aluno();/*Aqui será o João*/
-	aluno1.setNome("João da Silva");
-	
-	aluno1.setIdade(50);
-	aluno1.setDataNascimrnto("20/10/1955");
-	aluno1.setDataMatricula("1251445.125645");
-	aluno1.setNumeroCpf("162.125.125.20");
-	aluno1.setNomeMae("Sintia");
-	aluno1.setNomePai("Pedrão Antonio");
-	aluno1.setRegistroGeral("152.1245.11");
-	aluno1.setSerieMatriculado("5");
-	aluno1.setNomeEscola("Escola de doido");
-	aluno1.setNota1(30);
-	aluno1.setNota2(40);
-	aluno1.setNota3(50);
-	aluno1.setNota4(40);
-
+		//*=========================================================================*/	
+		/*Entrada de dado */
+		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
+		/*como data de nascimento e um numero inteiro e a variavel idade 
+		 retorna instring temos que converter setIdade para int primeiro*/
+		String idade = JOptionPane.showInputDialog("Qual o sua idade?");
+		String dataNascimento = JOptionPane.showInputDialog("Data de nascimento?");
+		String rg = JOptionPane.showInputDialog("Qual seu RJ?");
+		String cpf = JOptionPane.showInputDialog("Qual seu CPF ?");
+		String mae = JOptionPane.showInputDialog("Nome da sua mãe?");
+		String pai = JOptionPane.showInputDialog("nome do seu pai ?");
+		String matricula = JOptionPane.showInputDialog("Qual sua matrica ?");
+		String serie = JOptionPane.showInputDialog(" Qual sua serie  ?");
+		
+		String note1 = JOptionPane.showInputDialog("Nota 1?");
+		String note2= JOptionPane.showInputDialog("Nota 2?");
+		String note3 = JOptionPane.showInputDialog("Nota 3 ?");
+		String note4= JOptionPane.showInputDialog("Nota 4 ?");
 		
 	
-	System.out.println("Aluno 1");
+		
+		
+	Aluno aluno1 = new  Aluno();/*Aqui será o João*/
+     
+	/*Chamando o metado Interger.valueOf para converter String para Int*/
+	aluno1.setNome(nome);
+    aluno1.setIdade(Integer.valueOf(idade));
+	aluno1.setDataNascimento(dataNascimento);
+	aluno1.setRegistroGeral(rg);
+	aluno1.setNumeroCpf(cpf);
+	aluno1.setNomeMae(mae);
+	aluno1.setNomePai(pai);
+	aluno1.setDataMatricula(matricula);
+	aluno1.setSerieMatriculado(serie);
+	
+	/*convesão*/
+	aluno1.setNota1(Double.parseDouble(note1));
+	aluno1.setNota2(Double.parseDouble(note2));
+	aluno1.setNota3(Double.parseDouble(note3));	
+	aluno1.setNota4(Double.parseDouble(note4));
+	
 	System.out.println("Nome é " + aluno1.getNome());
 	System.out.println("Nome do mãe é " + aluno1.getNomeMae());
 	System.out.println("Nome da Escola é " + aluno1.getNomeEscola());
 	System.out.println("Nome é = " + aluno1.getNome());/*Get resgata um valor do atributo*/
 	System.out.println("Média de nota é " + aluno1.getMediaNota());
-	;
+	
 	System.out.println("Resultado 1 " +( aluno1.getAlunoAprovado() ?  "Aprovado" : "Reprovado"));
 
 	System.out.println("Resultado 2 " + aluno1.getAlunoAprovado2());
 	System.out.println("===================================================================");
 	/*===========================================================================================*/
-	Aluno aluno2 = new Aluno();/*Aqui será o Pedro*/
 	
-	aluno2.setNome("Osvaldo pedrosa");
-	aluno2.setDataMatricula("1225.125.22");
-	aluno2.setNomeMae("Maria");
-	aluno2.setNomePai("Pedrão Antonio");
-	aluno2.setRegistroGeral("152.1245.11");
-	aluno2.setSerieMatriculado("5");
-	aluno2.setNomeEscola("Tecnologia maracada");
-
-	System.out.println("Aluno 2");
-	System.out.println("Nome é " + aluno2.getNome());
-	System.out.println("Nome do mãe é " + aluno2.getNomeMae());
-	System.out.println("Nome da Escola é " + aluno2.getNomeEscola());
-	
-	
-    /*=============================================================================================*/	
-	Aluno aluno3 = new Aluno(); /*Aqui será o Alex*/
-	
-	Aluno aluno4 = new Aluno("maria");
-	
-	Aluno aluno5 = new Aluno("José ", 50);/*Construtur com parametro*/
-	
-
 	
 	}	
 	

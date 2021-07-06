@@ -25,18 +25,7 @@ public class PrimeiroClasseJava {
 		String matricula = JOptionPane.showInputDialog("Qual sua matrica ?");
 		String serie = JOptionPane.showInputDialog(" Qual sua serie  ?");
 		
-		/*Inserindo dados pelo teclado*/
-		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1?");
-		String note1 = JOptionPane.showInputDialog("Nota 1?");
-		
-		String disciplina2 = JOptionPane.showInputDialog("Disciplina 1?");
-		String note2= JOptionPane.showInputDialog("Nota 2?");
-		
-		String disciplina3 = JOptionPane.showInputDialog("Disciplina 1?");
-		String note3 = JOptionPane.showInputDialog("Nota 3 ?");
-		
-		String disciplina4 = JOptionPane.showInputDialog("Disciplina 1?");
-		String note4= JOptionPane.showInputDialog("Nota 4 ?");
+
 		
 		/*Criando um Objeto*/
 		Aluno aluno1 =  new Aluno(); 
@@ -51,16 +40,18 @@ public class PrimeiroClasseJava {
 		aluno1.setDataMatricula(matricula);
 		aluno1.setSerieMatriculado(serie);
 		
-		/*Setando os dados salvo para as variaveis*/
-		aluno1.getDisciplina().setNota1(Double.parseDouble(note1));
-		aluno1.getDisciplina().setNota2(Double.parseDouble(note2));
-		aluno1.getDisciplina().setNota3(Double.parseDouble(note3));	
-		aluno1.getDisciplina().setNota4(Double.parseDouble(note4));
-	
-		aluno1.getDisciplina().setDisciplina1(disciplina1);	
-		aluno1.getDisciplina().setDisciplina2(disciplina2);	
-		aluno1.getDisciplina().setDisciplina3(disciplina3);	
-		aluno1.getDisciplina().setDisciplina4(disciplina4);	
+			/*pos de posição iniiciando do 1 enquanto a posição for menor que 4 vai rodar*/
+		for (int pos = 1; pos <= 4; pos++) {
+      		String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina"+pos+" ?");
+			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina"+pos+" ?");
+			
+		
+			Disciplina disciplina = new Disciplina();
+			disciplina.setDisciplina(notaDisciplina);
+			disciplina.setNota(Double.valueOf(notaDisciplina));
+			
+			aluno1.getDisciplinas().add(disciplina);
+		}
 		
 		/*Informando oque vai ser mostrado na tela */
 		System.out.println(aluno1);/*Descrição do Objeto na memoria*/

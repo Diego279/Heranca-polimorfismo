@@ -1,6 +1,9 @@
 package cursojava.classes;
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 public class Aluno {
+	/*Atrin*/
 	 private  String nome;
 	 private int idade;
 	 private String dataNascimento;
@@ -12,20 +15,24 @@ public class Aluno {
 	 private String nomeEscola;
 	 private String serieMatriculado;  
 	 
-	 private Disciplina disciplina = new Disciplina();
+	 /*Declaração de uma Lista*/
+	 private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	 
-	 public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+	 
+	 
+	 /*Get e set---------------------------- */
+	 public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
-	 
-	 public Disciplina getDisciplina() {
-		return disciplina;
+
+	 public List<Disciplina> getDisciplinas(){
+		 return disciplinas;
+	 }
+	 /*--------------------------------------*/
+ 
+ 	public Aluno() { /* Cria os dados na memoria - Sendo padão do Java*/
 	}
-	 
 	
-	public Aluno() {
-		// TODO Auto-generated constructor stub
-	}
 	public Aluno(String nomePadrao) {
 		nome = nomePadrao;
 }
@@ -108,16 +115,16 @@ public String toString() {
 	return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 			+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 			+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-			+ serieMatriculado + ", disciplina=" + disciplina + "]";
+			+ serieMatriculado + ", disciplina=" +  "]";
 }
-
 
 
 /*Método que retorna a média do aluno*/
 public double getMediaNota() {
- return (disciplina.getNota1() + disciplina.getNota2() + 
-		 disciplina.getNota3() + disciplina.getNota4()) / 4;
+ return 0;
 }
+
+
 /*Método que retorna true para aprovado e false para reprovado*/
 public boolean getAlunoAprovado() {
 	double media = this.getMediaNota();/*Estou atribuido a media da nota para a variavel media*/
@@ -127,7 +134,8 @@ public boolean getAlunoAprovado() {
 		return false;
 	}
 }
-/*Segundo Metado Retornado String*/
+
+
 public String getAlunoAprovado2() {
 	double media = this.getMediaNota();
 	if (media >= 70) {

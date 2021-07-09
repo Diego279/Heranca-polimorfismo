@@ -88,13 +88,16 @@ public class PrimeiroClasseJava {
 	  	alunos.add(aluno1);
 	}
 		for (Aluno aluno : alunos) {
+			
+			if (aluno.getNome().equalsIgnoreCase("alex")) {/*encontrando alex na lista */
 			/*Informando oque vai ser mostrado na tela */
 			System.out.println(aluno);/*Descrição do Objeto na memoria*/
 			System.out.println("Media do aluno = " + aluno.getMediaNota());
 			System.out.println("Resultado = " + aluno .getAlunoAprovado2());
-			
+			break;
+			}
 
-	System.out.println("----------------------------------------------------------------");
+	System.out.println("------------------------------------------------------");
 		}
 		
 		

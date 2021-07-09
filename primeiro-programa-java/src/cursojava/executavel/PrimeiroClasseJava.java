@@ -1,6 +1,9 @@
   
 package cursojava.executavel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
@@ -10,12 +13,20 @@ public class PrimeiroClasseJava {
 	
 	/*Main é um metado auto executavel em java*/
 	public static void main(String[] args) {
-	
-	
-		/*new Aluno() é uma intancia (Criação de Objeto)*/	
-		/* aluno1 é uma referencia para objeto aluno*/
 		
-		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
+		
+	/*arry de Lista de alunos */
+	
+		List<Aluno> alunos = new ArrayList<Aluno>();		
+
+		for(int qtd = 1 ; qtd <=2; qtd++) {
+			
+			/*new Aluno() é uma intancia (Criação de Objeto)*/	
+			/* aluno1 é uma referencia para objeto aluno*/
+		
+		String nome = JOptionPane.showInputDialog("Qual o nome do aluno "+qtd+ "  ?");
+		
+					
 		
 		/*String idade = JOptionPane.showInputDialog("Qual o sua idade?");
 		String dataNascimento = JOptionPane.showInputDialog("Data de nascimento?");
@@ -74,13 +85,17 @@ public class PrimeiroClasseJava {
 	  		}
 		
 	  	}
-		/*Informando oque vai ser mostrado na tela */
-		System.out.println(aluno1);/*Descrição do Objeto na memoria*/
-		System.out.println("Media do aluno = " + aluno1.getMediaNota());
-		System.out.println("Resultado = " + aluno1 .getAlunoAprovado2());
-		
+	  	alunos.add(aluno1);
+	}
+		for (Aluno aluno : alunos) {
+			/*Informando oque vai ser mostrado na tela */
+			System.out.println(aluno);/*Descrição do Objeto na memoria*/
+			System.out.println("Media do aluno = " + aluno.getMediaNota());
+			System.out.println("Resultado = " + aluno .getAlunoAprovado2());
+			
 
-				
+	System.out.println("----------------------------------------------------------------");
+		}
 		
 		
 	}	

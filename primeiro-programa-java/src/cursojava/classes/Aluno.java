@@ -121,14 +121,20 @@ public String toString() {
 
 /*Método que retorna a média do aluno*/
 public double getMediaNota() {
- return 0;
+	double somaNotas = 0.0;
+	 
+	for (Disciplina disciplina : disciplinas) {
+		 somaNotas += disciplina.getNota();	
+		
+	}
+	
+	return somaNotas / disciplinas.size();
+	
 }
-
-
 /*Método que retorna true para aprovado e false para reprovado*/
 public boolean getAlunoAprovado() {
 	double media = this.getMediaNota();/*Estou atribuido a media da nota para a variavel media*/
-	if (media >= 70) {
+	if (media >= 70) {/*Aprovado*/
 		return true;
 	}else {
 		return false;
@@ -138,10 +144,13 @@ public boolean getAlunoAprovado() {
 
 public String getAlunoAprovado2() {
 	double media = this.getMediaNota();
-	if (media >= 70) {
+	if (media >= 50) {
+		if(media >= 70) {
 		return "Aluno estâ aprovado";
 	}else {
-		return "Aluno esta reprovado";
+		return "Aluno em recuperação";
+	}
+	}else{	return "Aluno esta reprovado";
 	}
 	}
 

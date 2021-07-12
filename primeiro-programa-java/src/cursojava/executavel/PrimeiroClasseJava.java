@@ -56,10 +56,10 @@ public class PrimeiroClasseJava {
 			/*pos de posição iniiciando do 1 enquanto a posição for menor que 4 vai rodar*/
 		for (int pos = 1; pos <= 4; pos++) {
       		String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina"+pos+" ?");
-			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina"+pos+" ?");
+  			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina"+pos+" ?");
 			
 		
-			Disciplina disciplina1 = new Disciplina();
+ 			Disciplina disciplina1 = new Disciplina();
 			disciplina1.setDisciplina(notaDisciplina);
 			
 		disciplina1.setNota(Double.valueOf(notaDisciplina));
@@ -71,6 +71,7 @@ public class PrimeiroClasseJava {
 	
 	  	if (escolha == 0) {/*Opção SIM  E ZERO*/
 	  		
+	  	
 	  		int  continuarRemover = 0;
 	  		int posicao = 1;
 	  		while (continuarRemover == 0){
@@ -90,17 +91,34 @@ public class PrimeiroClasseJava {
 		for (Aluno aluno : alunos) {
 			
 			if (aluno.getNome().equalsIgnoreCase("alex")) {/*encontrando alex na lista */
-			/*Informando oque vai ser mostrado na tela */
-			System.out.println(aluno);/*Descrição do Objeto na memoria*/
-			System.out.println("Media do aluno = " + aluno.getMediaNota());
-			System.out.println("Resultado = " + aluno .getAlunoAprovado2());
-			break;
+				alunos.remove(aluno);
+				break;
+				
+			}else {	/*Informando oque vai ser mostrado na tela */
+				System.out.println(aluno);/*Descrição do Objeto na memoria*/
+				System.out.println("Media do aluno = " + aluno.getMediaNota());
+				System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+				System.out.println("------------------------------------------------------");
 			}
+						
+		}
+		
+		for (Aluno aluno : alunos) {
+			System.out.println("aluno que sobraram na lista");
+			System.out.println(aluno.getNome());
+			System.out.println("Suas materias são");
+			
+			for (Disciplina disciplina : aluno.getDisciplinas()) {
+				System.out.println(disciplina.getDisciplina());
+				
+			}
+			}
+		} 
 
-	System.out.println("------------------------------------------------------");
+	
 		}
 		
 		
-	}	
 		
-}	
+		
+	

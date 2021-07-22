@@ -2,6 +2,7 @@
 package cursojava.executavel;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -84,22 +85,34 @@ public class PrimeiroClasseJava {
 			
 	  	alunos.add(aluno1);
 	}
-	  	
+	  	/*identificou o aluno alex e remove e para o codigo*/
 				for (Aluno aluno : alunos) {
 					
-					if (aluno.getNome().equalsIgnoreCase("alex")) {
-					
+					if (aluno.getNome().equalsIgnoreCase("alex")){;
+					alunos.remove(aluno);
+					break;/*para o codigo*/
+				}else{					
 					System.out.println (aluno);
 					System.out.println("Media do aluno " +aluno.getMediaNota());
 					System.out.println("Resultado = " + aluno.getAlunoAprovado2());
 					System.out.println("----------------------------------------------------------");
-						break;
+					
+				}				
+		     }
+				/*Percorrendo a lista dentro de outra lista */
+				for (Aluno aluno : alunos) {
+					
+					System.out.println("Alunos que sobraram na lista ");
+					System.out.println(aluno.getNome());
+					System.out.println("Suas materias são ");
+					System.out.println(aluno.getDataMatricula());
+					/*Dentro de aluno tem disciplina percorre a lista*/
+					for (Disciplina disciplina1 : aluno.getDisciplinas()){
+						System.out.println(disciplina1.getDisciplina());
 					}
 				}
 				
-		
-		     }
 		}
 		
-
+}
 	

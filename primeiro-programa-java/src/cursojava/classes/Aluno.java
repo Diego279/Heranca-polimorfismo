@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 public class Aluno {
-	/*Atrin*/
+	/*Atributos*/
 	 private  String nome;
 	 private int idade;
 	 private String dataNascimento;
@@ -14,21 +14,19 @@ public class Aluno {
 	 private String dataMatricula;
 	 private String nomeEscola;
 	 private String serieMatriculado;  
-	 
-	 /*Declaração de uma Lista*/
+	
 	 private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	 
 	 
-	 
-	 /*Get e set---------------------------- */
-	 public void setDisciplinas(List<Disciplina> disciplinas) {
+
+	 public void setDisciplinas(List<Disciplina> disciplinas) {  /*set disciplina*/
 		this.disciplinas = disciplinas;
 	}
-
-	 public List<Disciplina> getDisciplinas(){
+	 
+	 public List<Disciplina> getDisciplinas(){  /*get disciplina*/
 		 return disciplinas;
 	 }
-	 /*--------------------------------------*/
+	
  
  	public Aluno() { /* Cria os dados na memoria - Sendo padão do Java*/
 	}
@@ -42,10 +40,7 @@ public class Aluno {
 		idade = idadePadrao;
 } 
 
-	/* Veremos o Metodos SETTERS E GETTERS do Objeto */
-	/*SET é para adicionar ou receber dados para os atribustos*/
-	/*GET é para resgastar ou obter o valor do atributo */
-
+/*-----------------------------------------------------------------------------------------------*/
 public void setNome(String nome) {
 	this.nome = nome;
 }
@@ -110,14 +105,16 @@ public void setSerieMatriculado(String serieMatriculado) {
 
 
 
+
+
+
 @Override
 public String toString() {
 	return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 			+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 			+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-			+ serieMatriculado + ", disciplina=" +  "]";
+			+ serieMatriculado + ", disciplinas=" + disciplinas + "]";
 }
-
 
 /*Método que retorna a média do aluno*/
 public double getMediaNota() {
@@ -153,7 +150,7 @@ public String getAlunoAprovado2() {
 	}else{	return "Aluno esta reprovado";
 	}
 	}
-
+/*-----------------------------------------------------------------------------------------------*/
 @Override
 public int hashCode() {
 	final int prime = 31;

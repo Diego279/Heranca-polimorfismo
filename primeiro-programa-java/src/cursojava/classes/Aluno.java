@@ -176,6 +176,17 @@ public boolean equals(Object obj) {
 	return true;
 }
 
+@Override /*Identifica método sobreescrito */
+public boolean pessoaMaiorIdade() {
+
+	return idade >= 21;
+		
+}
+
+public String msgMaiorIdade () {
+	
+	return this.pessoaMaiorIdade() ? "Obaa aluno é maior de idade " : "Ixii vc é menor de idade";
+}
 
 	
 }

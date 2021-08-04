@@ -1,5 +1,5 @@
 package cursojava.classes;
-
+/*Classe pai ou classe master ou Super classe */
 public class Pessoa {
 	
 	 protected String nome;

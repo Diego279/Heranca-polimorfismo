@@ -1,18 +1,11 @@
 package cursojava.classes;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import cursojava.constantes.StatusAluno;
-public class Aluno {
+public class Aluno extends Pessoa {
 	/*Atributos*/
-	 private  String nome;
-	 private int idade;
-	 private String dataNascimento;
-	 private String registroGeral;
-	 private String numeroCpf;
-	 private String nomeMae;
-	 private String nomePai;
+
 	 private String dataMatricula;
 	 private String nomeEscola;
 	 private String serieMatriculado;  
@@ -34,7 +27,7 @@ public class Aluno {
 	}
 	
 	public Aluno(String nomePadrao) {
-		nome = nomePadrao;
+		super.nome = nomePadrao;
 }
 
 	public Aluno (String nomePadrao,   int idadePadrao) {

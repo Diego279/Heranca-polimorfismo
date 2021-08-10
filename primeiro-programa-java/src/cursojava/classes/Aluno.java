@@ -186,7 +186,14 @@ public boolean pessoaMaiorIdade() {
 public String msgMaiorIdade () {
 	
 	return this.pessoaMaiorIdade() ? "Obaa aluno é maior de idade " : "Ixii vc é menor de idade";
+	}
+
+@Override
+public double salario() {
+
+	return 1500.90;
 }
+
 
 	
 }

@@ -1,6 +1,6 @@
 package cursojava.classes;
 /*Classe pai ou classe master ou Super classe */
-public class Pessoa {
+public abstract class Pessoa {
 	
 	 protected String nome;
 	 protected int idade;
@@ -10,6 +10,8 @@ public class Pessoa {
 	 protected String nomeMae;
 	 protected String nomePai;
 	 
+	 /*Método abstrato é que fica na classe pai é obrigatório para as class filhas */
+	 public abstract double salario();
 	 
 	public String getNome() {
 		return nome;

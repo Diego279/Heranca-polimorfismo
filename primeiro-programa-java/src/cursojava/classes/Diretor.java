@@ -68,6 +68,12 @@ public class Diretor extends Pessoa{
 			return false;
 		return true;
 	}
+	/*Metodo obrigatorio em todas as classes filha*/
+	@Override
+	public double salario() {
+		
+		return 3900.78;
+	}
 	
 	
 	

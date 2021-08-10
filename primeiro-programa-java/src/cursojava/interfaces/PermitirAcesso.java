@@ -2,9 +2,7 @@ package cursojava.interfaces;
 
 /*Essa interface será o nosso contrato de autenticacâo*/
 public interface PermitirAcesso {
+	/* Interface recebendo parametros*/
+	public boolean autenticar(String login, String senha);
 	
-
-	public boolean autenticar();/*Apenas declaração do método*/
-	
-
-}
+} 

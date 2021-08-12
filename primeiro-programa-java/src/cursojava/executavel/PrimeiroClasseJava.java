@@ -21,10 +21,18 @@ public class PrimeiroClasseJava {
 		
 		String login = JOptionPane.showInputDialog("Informe o Login");
 		String senha = JOptionPane.showInputDialog("Informe a senha ");
-			
-			
-		if (new Secretario().autenticar(login, senha )) {/*se TRUE acessa se False não acessa */
 		
+		
+		PermitirAcesso permitirAcesso = new Secretario(login, senha );
+		
+		
+		
+			 
+		if (permitirAcesso.autenticar()) {/*se TRUE acessa se False não acessa */
+		
+			
+			
+			
 				List<Aluno> alunos = new ArrayList<Aluno>();
 				
 				/*É uma lista que dentro dela temos uma chave que identifica uma sequencia de valores também*/

@@ -5,4 +5,6 @@ public interface PermitirAcesso {
 	/* Interface recebendo parametros*/
 	public boolean autenticar(String login, String senha);
 	
+	
+	public boolean autenticar();
 } 

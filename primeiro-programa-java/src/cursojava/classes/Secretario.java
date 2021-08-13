@@ -97,6 +97,9 @@ public class Secretario extends Pessoa implements PermitirAcesso{
 		// TODO Auto-generated method stub
 		return 1800.80 * 0.9;
 	}
+	
+	
+	
 	/*Esse exemplo não esta sendo utilizado */
 	@Override
 	public boolean autenticar(String login, String senha) {

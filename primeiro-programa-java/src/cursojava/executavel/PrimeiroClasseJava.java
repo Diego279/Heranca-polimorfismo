@@ -20,6 +20,7 @@ public class PrimeiroClasseJava {
 	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
 		
+		try {
 		
 		String login = JOptionPane.showInputDialog("Informe o Login");
 		String senha = JOptionPane.showInputDialog("Informe a senha ");
@@ -29,16 +30,13 @@ public class PrimeiroClasseJava {
 		 
 		 if (new FuncaoAutenticacao (new Diretor(login, senha )).autenticar()) {/*Vou travar o contrato para autorizar somente quem realmente tem o contarto 100% legitimo */
 		
-			
-			
-			
-				List<Aluno> alunos = new ArrayList<Aluno>();
+		 List<Aluno> alunos =  new ArrayList<Aluno>();
 				
 				/*É uma lista que dentro dela temos uma chave que identifica uma sequencia de valores também*/
 				HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();/*maps e a variavel criada HashMaps*/
 				
 								
-				for (int qtd = 1; qtd <=5; qtd++) {
+				for (int qtd = 1; qtd <=2; qtd++) {
 				
 			/*new Aluno() é uma intancia (Criação de Objeto)*/	
 			/* aluno1 é uma referencia para objeto aluno*/
@@ -147,7 +145,18 @@ public class PrimeiroClasseJava {
 				
 			}
 	 				
-     	}
+    }catch (Exception e) {
+    	
+		e.printStackTrace();/*Imprime erro no console java*/
+		/*Mensagem do erro ou causa */
+		System.out.println(" Mengem: " + e.getMessage());
+		
+		JOptionPane.showMessageDialog(null, "Erro ao processar notas " + e.getMessage() );
+	}
+	
+		/*AQUI*/
+	}
+	
 	}
 				
 		

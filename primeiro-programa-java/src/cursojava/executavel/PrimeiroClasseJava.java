@@ -142,24 +142,37 @@ public class PrimeiroClasseJava {
 				
 		}else {
 			JOptionPane.showConfirmDialog(null, "Acesso não permitido");
-				
-			}
-	 				
-    }catch (Exception e) {
+		}
+		 
+		 /*AQUI*/
+			
+			}catch (Exception e) {
     	
-		e.printStackTrace();/*Imprime erro no console java*/
-		/*Mensagem do erro ou causa */
-		System.out.println(" Mengem: " + e.getMessage());
-		
-		JOptionPane.showMessageDialog(null, "Erro ao processar notas " + e.getMessage() );
-	}
-	
-		/*AQUI*/
-	}
-	
-	}
+				StringBuilder saida = new StringBuilder();
 				
+				
+    	/*Imprime erro no consolo Java*/
+		e.printStackTrace();
 		
+		/*Mensagem do erro ou causa */
+		System.out.println(" Mensagem: " + e.getMessage());
 		
-
+		for (int pos = 0; pos < e.getStackTrace().length; pos++){
+			
+			saida.append("\n Classe de erro : " +e.getStackTrace()[pos].getClassLoaderName());
+			saida.append("\n Método de erro : " +e.getStackTrace()[pos].getMethodName());
+			saida.append("\n Linha de erro : " +e.getStackTrace()[pos].getLineNumber());
+			saida.append("\n Class : " +e.getClass().getName());
+		}
+		
+		e.getStackTrace();
+		
+				
+		JOptionPane.showMessageDialog(null, "Erro ao processar notas" + saida.toString());
+	
+			
+			}	
+	}
+		
+}/*Final do método principal da class*/
 	

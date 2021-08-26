@@ -1,6 +1,7 @@
   
 package cursojava.executavel;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -21,6 +22,9 @@ public class PrimeiroClasseJava {
 	public static void main(String[] args) {
 		
 		try {
+			
+			new File("arivo.txt");
+		
 		
 		String login = JOptionPane.showInputDialog("Informe o Login");
 		String senha = JOptionPane.showInputDialog("Informe a senha ");
@@ -30,23 +34,22 @@ public class PrimeiroClasseJava {
 		 
 		 if (new FuncaoAutenticacao (new Diretor(login, senha )).autenticar()) {/*Vou travar o contrato para autorizar somente quem realmente tem o contarto 100% legitimo */
 		
-		 List<Aluno> alunos =  new ArrayList<Aluno>();
+		 List<Aluno> alunos = new ArrayList<Aluno>();
 				
 				/*É uma lista que dentro dela temos uma chave que identifica uma sequencia de valores também*/
 				HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();/*maps e a variavel criada HashMaps*/
 				
 								
-				for (int qtd = 1; qtd <=2; qtd++) {
+				for (int qtd = 1; qtd <=1; qtd++) {
 				
 			/*new Aluno() é uma intancia (Criação de Objeto)*/	
 			/* aluno1 é uma referencia para objeto aluno*/
 		
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno" +qtd+"?");
+		String idade = JOptionPane.showInputDialog("Qual o sua idade?");
 		
-					
 		
-		/*String idade = JOptionPane.showInputDialog("Qual o sua idade?");
-		String dataNascimento = JOptionPane.showInputDialog("Data de nascimento?");
+		/*String dataNascimento = JOptionPane.showInputDialog("Data de nascimento?");
 		String rg = JOptionPane.showInputDialog("Qual seu RJ?");
 		String cpf = JOptionPane.showInputDialog("Qual seu CPF ?");
 		String mae = JOptionPane.showInputDialog("Nome da sua mãe?");
@@ -59,9 +62,9 @@ public class PrimeiroClasseJava {
 		Aluno aluno1 =  new Aluno(); 
 				 
 		aluno1.setNome(nome);
-		
-	/*	aluno1.setIdade(Integer.valueOf(idade));
-		aluno1.setDataNascimento(dataNascimento);
+		aluno1.setIdade(Integer.valueOf(idade));/*convertendo String para numero*/
+	
+		/*aluno1.setDataNascimento(dataNascimento);
 		aluno1.setRegistroGeral(rg);
 		aluno1.setNumeroCpf(cpf);
 		aluno1.setNomeMae(mae);
@@ -146,7 +149,7 @@ public class PrimeiroClasseJava {
 		 
 		 /*AQUI*/
 			
-			}catch (Exception e) {
+			}catch (NumberFormatException e) {
     	
 				StringBuilder saida = new StringBuilder();
 				
@@ -168,10 +171,13 @@ public class PrimeiroClasseJava {
 		e.getStackTrace();
 		
 				
-		JOptionPane.showMessageDialog(null, "Erro ao processar notas" + saida.toString());
-	
+		JOptionPane.showMessageDialog(null, "Erro de conversão de numero" + saida.toString());
+		
 			
-			}	
+			}	catch (NullPointerException e) {
+				JOptionPane.showMessageDialog(null, "oPaa um null pointer exeptio" + e.getClass());
+		} catch (Exception e) {
+			e.printStackTrace();		}
 	}
 		
 }/*Final do método principal da class*/
